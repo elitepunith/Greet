@@ -1,0 +1,16 @@
+.rio {
+
+    font-family: 'Unsanctioned', Impact, sans-serif;
+    text-align: center;
+    color: rgb(115, 149, 236);
+}
+
+body {
+
+    background-color: rgb(247, 186, 196);
+}
+
+@font-face {
+  font-family: 'Unsanctioned';
+  src: url('fonts/unsanctioned.woff2') format('woff2');
+}
