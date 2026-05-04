@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greet</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://jsdelivr.net"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
 
@@ -12,6 +14,15 @@
     <div class="heart" style="left:45%; animation-delay:4s;">💗</div>
     <div class="heart" style="left:65%; animation-delay:1s;">❤️</div>
     <div class="heart" style="left:85%; animation-delay:3s;">✨</div>
+
+    <div class="music-player">
+        <div class="song-info">🎵 Playing: Bestie Vibes</div>
+        <div class="controls">
+            <button id="playBtn">▶️ Play</button>
+            <button id="nextBtn">⏭️ Next</button>
+        </div>
+        <audio id="audioElement" src=""></audio>
+    </div>
 
     <button class="blast-btn" onclick="party()">Surprise! 🎉</button>
 
@@ -24,13 +35,14 @@
 
     <div id="timer">Loading special moments...</div>
 
-    <p class="rmm">Happy Birthday to my absolute bestie! Even though there's distance between us, I wanted to write this because you truly mean the world to me. Thank you for always being my rock, my favorite person to spam with Instagram reels, and the absolute best friend anyone could ever ask for. I honestly don't know what I'd do without our daily chats and the endless stream of funny reels that keep us feeling so close, no matter the miles. You have this amazing ability to make me laugh and brighten my day just through a message on my screen. Here's to making so many more amazing memories this year, supporting each other from afar, and celebrating all your big wins. I hope your birthday is just as incredibly beautiful, bright, and special as you are!</p>
+    <div class="message-container">
+        <div class="message-image">
+            <img src="assets/pic1.jpeg" alt="Bestie">
+        </div>
+        <p class="rmm">Happy Birthday to my absolute bestie! Even though there's distance between us, I wanted to write this because you truly mean the world to me. Thank you for always being my rock, my favorite person to spam with Instagram reels, and the absolute best friend anyone could ever ask for. I honestly don't know what I'd do without our daily chats and the endless stream of funny reels that keep us feeling so close, no matter the miles. You have this amazing ability to make me laugh and brighten my day just through a message on my screen. Here's to making so many more amazing memories this year, supporting each other from afar, and celebrating all your big wins. I hope your birthday is just as incredibly beautiful, bright, and special as you are!</p>
+    </div>
 
     <div class="gallery">
-        <div class="polaroid">
-            <img src="assets/pic1.jpeg" alt="pic1">
-            <div class="caption">joshee</div>
-        </div>
         <div class="polaroid">
             <img src="assets/pic2.jpeg" alt="pic2">
             <div class="caption">Bestie</div>
@@ -49,34 +61,6 @@
         </div>
     </div>
 
-    <script>
-        function party() {
-            confetti({
-                particleCount: 150,
-                spread: 70,
-                origin: { y: 0.6 }
-            });
-        }
-
-        function startTimer() {
-            const end = new Date();
-            end.setHours(23, 59, 59);
-            
-            setInterval(() => {
-                const now = new Date();
-                const diff = end - now;
-                const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-                const m = Math.floor((diff / 1000 / 60) % 60);
-                const s = Math.floor((diff / 1000) % 60);
-                document.getElementById('timer').innerText = `Celebrating you for the next ${h}h ${m}m ${s}s!`;
-            }, 1000);
-        }
-
-        window.onload = () => {
-            party();
-            startTimer();
-        };
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
