@@ -3,14 +3,35 @@
     font-family: 'Unsanctioned', Impact, sans-serif;
     text-align: center;
     color: rgb(115, 149, 236);
-}
-
-body {
-
-    background-color: rgb(247, 186, 196);
+    font-size: 3rem;
 }
 
 @font-face {
   font-family: 'Unsanctioned';
   src: url('fonts/unsanctioned.woff2') format('woff2');
+}
+
+.rmm {
+
+    color: rgb(255, 255, 255);
+    font-family:'Courier New', Courier, monospace;
+    text-align: right;
+}
+
+
+body {
+    background-color: rgb(238, 175, 186); 
+
+    background-image: url('assets/josheee.jpeg'); 
+    background-size: 400px; 
+
+    background-repeat: repeat; 
+    background-blend-mode: multiply; 
+
+    margin: 0;
+    height: 100vh; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
 }
