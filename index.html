@@ -3,10 +3,26 @@
 <head>
     <title>Greet</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://jsdelivr.net"></script>
 </head>
 <body>
 
+    <div class="heart" style="left:10%; animation-delay:0s;">❤️</div>
+    <div class="heart" style="left:25%; animation-delay:2s;">💖</div>
+    <div class="heart" style="left:45%; animation-delay:4s;">💗</div>
+    <div class="heart" style="left:65%; animation-delay:1s;">❤️</div>
+    <div class="heart" style="left:85%; animation-delay:3s;">✨</div>
+
+    <button class="blast-btn" onclick="party()">Surprise! 🎉</button>
+
     <h1 class="rio">HAPPY BIRTHDAY</h1>
+
+    <div class="cake-box">
+        <span class="candle">🕯️</span>
+        <span>🎂</span>
+    </div>
+
+    <div id="timer">Loading special moments...</div>
 
     <p class="rmm">Happy Birthday to my absolute bestie! Even though there's distance between us, I wanted to write this because you truly mean the world to me. Thank you for always being my rock, my favorite person to spam with Instagram reels, and the absolute best friend anyone could ever ask for. I honestly don't know what I'd do without our daily chats and the endless stream of funny reels that keep us feeling so close, no matter the miles. You have this amazing ability to make me laugh and brighten my day just through a message on my screen. Here's to making so many more amazing memories this year, supporting each other from afar, and celebrating all your big wins. I hope your birthday is just as incredibly beautiful, bright, and special as you are!</p>
 
@@ -15,27 +31,52 @@
             <img src="assets/pic1.jpeg" alt="pic1">
             <div class="caption">joshee</div>
         </div>
-
         <div class="polaroid">
             <img src="assets/pic2.jpeg" alt="pic2">
             <div class="caption">Bestie</div>
         </div>
-
         <div class="polaroid">
             <img src="assets/pic3.jpeg" alt="pic3">
             <div class="caption">Us</div>
         </div>
-
         <div class="polaroid">
             <img src="assets/pic4.jpeg" alt="pic4">
             <div class="caption">Smile</div>
         </div>
-
         <div class="polaroid">
             <img src="assets/pic5.jpeg" alt="pic5">
             <div class="caption">Forever</div>
         </div>
     </div>
+
+    <script>
+        function party() {
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+
+        function startTimer() {
+            const end = new Date();
+            end.setHours(23, 59, 59);
+            
+            setInterval(() => {
+                const now = new Date();
+                const diff = end - now;
+                const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                const m = Math.floor((diff / 1000 / 60) % 60);
+                const s = Math.floor((diff / 1000) % 60);
+                document.getElementById('timer').innerText = `Celebrating you for the next ${h}h ${m}m ${s}s!`;
+            }, 1000);
+        }
+
+        window.onload = () => {
+            party();
+            startTimer();
+        };
+    </script>
 
 </body>
 </html>

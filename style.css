@@ -6,6 +6,7 @@
 body {
     background-color: rgb(247, 186, 196);
     margin: 20px;
+    overflow-x: hidden;
 }
 
 .rio {
@@ -39,7 +40,16 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 10px 10px 30px 10px;
     text-align: center;
+    transition: transform 0.3s ease;
 }
+
+.polaroid:hover {
+    transform: scale(1.05) rotate(0deg) !important;
+    z-index: 10;
+}
+
+.polaroid:nth-child(even) { transform: rotate(2deg); }
+.polaroid:nth-child(odd) { transform: rotate(-2deg); }
 
 .polaroid img {
     width: 100%;
@@ -51,4 +61,55 @@ body {
     padding: 10px;
     font-family: 'Brush Script MT', cursive;
     font-size: 20px;
+}
+
+.cake-box {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.candle {
+    font-size: 25px;
+    display: block;
+    margin-bottom: -15px;
+    animation: flicker 0.6s infinite alternate;
+}
+
+@keyframes flicker {
+    from { opacity: 0.7; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1.1); }
+}
+
+.heart {
+    position: fixed;
+    bottom: -50px;
+    font-size: 20px;
+    animation: floatUp 7s linear infinite;
+    z-index: -1;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+#timer {
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+button.blast-btn {
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 10px 20px;
+    background: rgb(115, 149, 236);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
 }
