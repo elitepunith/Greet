@@ -9,6 +9,6 @@ This is a basic website for birthday greetings !
 
 ### Preview 
 
-[alt text](<Screenshot 2026-05-04 160449.png>)
+![alt text](<Screenshot 2026-05-04 160449.png>)
 
-![alt text](image.png)!
+![alt text](image.png)
