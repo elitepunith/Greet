@@ -24,39 +24,6 @@ function startTimer() {
     }, 1000);
 }
 
-let isPlaying = false;
-const audio = document.getElementById('audioElement');
-const playBtn = document.getElementById('playBtn');
-const nextBtn = document.getElementById('nextBtn');
-
-const playlist = [
-    "assets/song1.mp3",
-    "assets/song2.mp3"
-];
-let currentSongIndex = 0;
-
-playBtn.addEventListener('click', () => {
-    if (isPlaying) {
-        audio.pause();
-        playBtn.innerText = "▶️ Play";
-    } else {
-        if (!audio.src || audio.src.endsWith("")) {
-             audio.src = playlist[currentSongIndex];
-        }
-        audio.play().catch(e => console.log("Make sure to add valid audio files to the playlist array!"));
-        playBtn.innerText = "⏸️ Pause";
-    }
-    isPlaying = !isPlaying;
-});
-
-nextBtn.addEventListener('click', () => {
-    currentSongIndex = (currentSongIndex + 1) % playlist.length;
-    audio.src = playlist[currentSongIndex];
-    if (isPlaying) {
-        audio.play().catch(e => console.log("Make sure to add valid audio files to the playlist array!"));
-    }
-});
-
 window.onload = () => {
     party();
     startTimer();
