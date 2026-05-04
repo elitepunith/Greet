@@ -1,37 +1,50 @@
-.rio {
-
-    font-family: 'Unsanctioned', Impact, sans-serif;
-    text-align: center;
-    color: rgb(115, 149, 236);
-    font-size: 3rem;
-}
-
-@font-face {
-  font-family: 'Unsanctioned';
-  src: url('fonts/unsanctioned.woff2') format('woff2');
-}
 
 .rmm {
 
-    color: rgb(255, 255, 255);
-    font-family:'Courier New', Courier, monospace;
-    text-align: right;
+    color: rgb(74, 65, 65);
+    font-family: 'Courier New', Courier, monospace;
+    flex: 1; 
+    text-align: right; 
+    line-height: 1.5; 
 }
 
+.wrapper {
+
+    display: flex; 
+    align-items: center;
+    gap: 30px; 
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 20px;
+
+}
+
+.circle-pic {
+
+    width: 250px; 
+    height: 250px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.rio {
+
+font-family: 'Unsanctioned', Impact, sans-serif;
+color: rgb(101, 157, 235);
+text-align: center;
+font-size: 3rem;
+
+}
+
+@font-face {
+
+  font-family: 'Unsanctioned';
+  src: url('fonts/unsanctioned.woff2') format('woff2'),
+       url('fonts/unsanctioned.woff') format('woff');
+}
 
 body {
-    background-color: rgb(238, 175, 186); 
-
-    background-image: url('assets/josheee.jpeg'); 
-    background-size: 400px; 
-
-    background-repeat: repeat; 
-    background-blend-mode: multiply; 
-
-    margin: 0;
-    height: 100vh; 
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
+    
+    background-color: rgb(252, 171, 184);
 }
