@@ -4,7 +4,7 @@
     color: rgb(74, 65, 65);
     font-family: 'Courier New', Courier, monospace;
     flex: 1; 
-    text-align: right; 
+    text-align: left; 
     line-height: 1.5; 
 }
 
@@ -45,6 +45,6 @@ font-size: 3rem;
 }
 
 body {
-    
+
     background-color: rgb(252, 171, 184);
 }
