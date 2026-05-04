@@ -1,105 +1,27 @@
-.text-content {
-    flex: 1; 
-    display: flex;
-    flex-direction: column; 
-    gap: 15px; 
-}
+.rio{
+    
+font-family: 'Unsanctioned', Impact, sans-serif;
+text-align: center;
+color: rgb(115, 149, 236);
+ font-size: 3rem;
 
-.rmm {
-    color: rgb(74, 65, 65);
-    font-family: 'Courier New', Courier, monospace;
-    text-align: left; 
-    line-height: 1.6; 
-    margin: 0; 
-}
-
-.wrapper {
-    display: flex; 
-    align-items: center; 
-    gap: 40px; 
-    max-width: 900px; 
-    margin: 0 auto; 
-    padding: 20px;
-}
-
-.circle-pic {
-    width: 250px; 
-    height: 250px; 
-    border-radius: 50%; 
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.rio {
-    font-family: 'Unsanctioned', Impact, sans-serif;
-    color: rgb(101, 157, 235);
-    text-align: center;
-    font-size: 3rem;
-}
-
-@font-face {
-  font-family: 'Unsanctioned';
-  src: url('fonts/unsanctioned.woff2') format('woff2'),
-       url('fonts/unsanctioned.woff') format('woff');
 }
 
 body {
-    background-color: rgb(252, 171, 184);
+
+    background-color: rgb(247, 186, 196);
+   
 }
 
-.music-player {
-    position: fixed; 
-    bottom: 20px;    
-    right: 20px;     
-    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%); 
-    padding: 15px 25px;
-    border-radius: 30px; 
-    box-shadow: 0 8px 20px rgba(255, 154, 158, 0.4); 
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    z-index: 100; 
-    border: 2px solid white; 
+@font-face {
+font-family: 'Unsanctioned';
+src: url('fonts/unsanctioned.woff2') format('woff2');
 }
 
-.track-info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #d13054; 
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 1rem;
-    max-width: 200px; 
-    overflow: hidden;
-    white-space: nowrap;
+.rmm {
+
+    color: rgb(23, 14, 14);
+    font-family:'Courier New', Courier, monospace;
+    text-align: left;
 }
 
-.music-icon {
-    font-size: 1.5rem;
-}
-
-.controls {
-    display: flex;
-    gap: 10px;
-}
-
-.player-btn {
-    background-color: white;
-    border: none;
-    border-radius: 50%; 
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.player-btn:hover {
-    transform: scale(1.1); 
-    background-color: #ffe6eb; 
-}
