@@ -23,6 +23,7 @@ This is a basic website for birthday greetings !
 ### Preview 
 <img width="1905" height="859" alt="Screenshot 2026-05-05 123811" src="https://github.com/user-attachments/assets/d50026b1-25ba-401f-9237-a643197e1ffc" />
 
+``
 
 <img width="1904" height="859" alt="Screenshot 2026-05-05 123825" src="https://github.com/user-attachments/assets/daacc0a2-dc0a-4908-b7bf-e053c50c6248" />
 
