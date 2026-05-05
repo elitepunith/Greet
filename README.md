@@ -26,5 +26,9 @@ This is a basic website for birthday greetings !
 
 ![alt text](image.png)
 
+### Credits 
+1. unpleash
+2. google
+   
 ### Author 
 elitepunith
