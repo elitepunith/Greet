@@ -10,9 +10,8 @@ This is a basic website for birthday greetings !
 
 ### Feature 
 
-1. you can replace the pics and put your owns !
-2. a surprise button ! to pop up blast 
-3. a cake and a timer for birthday !
+1. a surprise button ! to pop up blast 
+2. a cake and a timer for birthday !
 
 ### what i learned ! 
 
